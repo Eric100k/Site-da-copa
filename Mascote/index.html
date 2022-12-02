@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Mascote</title>
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet" />
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--CSS-->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/mascote.css" />
+
+
+</head>
+
+<body>
+
+    <header id="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Sitezin</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../Placares/index.html">Placares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../CalendarioCopa/index.html">Calendário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Reprises</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../Mascote/index.html">Mascote</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+
+        <div class="destaque">
+            <img src="./img/01.png">
+        </div>
+
+        <script>
+            var banners = ["./img/01.png", "./img/02.png", "./img/03.png"];
+            var bannerAtual = 0;
+
+            function trocaBanner() { //cria umaun
+                //Alterna entre as imagens modedificando o valor do array,dividindo entre as imagens o tempo  determinado 
+                bannerAtual = (bannerAtual + 1) % 3;
+                document.querySelector('.destaque img').src = banners[bannerAtual];
+            }
+
+            setInterval(trocaBanner, 2000); //determina o tempo para a função exemplo 1000 = 1seg
+        </script>
+
+
+
+</body>
+
+</html>

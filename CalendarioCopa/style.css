@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --degrade: linear-gradient(to bottom right, #a30f38, #1e010a);
+    --rosa: rgba(224, 224, 224, 0.13);
+    --degrade-dourado: linear-gradient(to bottom right, #f1c54a, #ffc43b);
+}
+
+ul{
+    list-style: none;
+}
+body{
+    background: var(--degrade);
+    background-position-x: center;
+    background-position-y: -715px;
+    font-family: 'Roboto', sans-serif;
+    background-size: 100%;
+}
+#app{
+    width: fit-content;
+    margin: 52px auto;
+}
+header{
+    text-align: center;
+    margin: 100px;
+}
+#cards{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.card{
+    padding: 32px 23px;
+    text-align: center;
+    background: var(--rosa);
+    border-bottom: 5px solid #F7DD43;
+    border-radius: 6px;
+}
+.card h2 {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px 16px;
+    border: 3px solid #F7DD43;
+    border-radius: 6px;
+
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 53px;
+
+    color: #F7DD43;
+}
+.card ul{
+    width: 270px;
+}
+.card h2 span{
+    color: #e1e1e6;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.card ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card ul li + li{
+    padding-top: 24px;
+    margin-top: 24px;
+    border-top: 1px solid #323238;
+}
+.card ul li strong{
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 125%;
+
+    color: #E1E1E6;
+}
+.card h2:hover,
+.card ul li strong:hover,
+.card ul li img:hover { /*quando passar o mouse em cima irá crescer o item*/
+  transform: scale(1.1);
+}
+.card h2,
+.card ul li strong,
+.card ul li img { /*transição para crescer o item*/
+  transition: transform 0.3s;
+}
+@media (min-width: 700px) { /*colocar os cards ao lado*/
+  #cards {
+    max-width: 670px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
